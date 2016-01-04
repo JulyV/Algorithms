@@ -47,4 +47,5 @@ function partition(arr, lo, hi) {
 		return i;
 }
 
-quickSort(arr, 0, arr.length - 1);
+var result = quickSort(arr, 0, arr.length - 1);
+console.log(result);
