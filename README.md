@@ -6,3 +6,6 @@ Next, we assume that the number at second position is the smallest in the remain
 
 Quick sort is a divide and conquer algorithm in the style of merge sort. The basic idea is to find a “pivot” item in the array to compare all other items against, then shift items such that all of the items before the pivot are less than the pivot value and all the items after the pivot are greater than the pivot value. After that, recursively perform the same operation on the items before and after the pivot.
 
+Merge sort is arguably the first useful sorting algorithm you learn in computer science. Merge sort has a complexity of O(n log n), making it one of the more efficient sorting algorithms available. Additionally, merge sort is a stable sort (just like insertion sort) so that the relative order of equivalent items remains the same before and after the sort.
+The algorithm for merge sort is based on the idea that it’s easier to merge two already sorted lists than it is to deal with a single unsorted list. To that end, merge sort starts by creating n number of one item lists where n is the total number of items in the original list to sort. Then, the algorithm proceeds to combine these one item lists back into a single sorted list.
+
