@@ -4,6 +4,16 @@ function quickSort(arr, left, right) {
 
     var index;
 
+    if (!Array.isArray(arr)) {
+        var message = 'Please enter an array';
+        return message;
+    }
+
+    if (arguments.length != 3 ) {
+        var message = 'Please enter all parameters: array, left index, right index';
+        return message;
+    }
+
     if (arr.length > 1) {
 
         index = partition(arr, left, right);
@@ -22,29 +32,29 @@ function quickSort(arr, left, right) {
 }
 
 function partition(arr, lo, hi) {
-	var i = lo,
-		j = hi,
-    	pivot = arr[Math.floor( (lo + hi) / 2) ],
-		temp = 0;
+    var i = lo,
+        j = hi,
+        pivot = arr[Math.floor( (lo + hi) / 2) ],
+        temp = 0;
 
-	while (i <= j) {
+    while (i <= j) {
 
-		while (arr[i] < pivot) {
-			i++;
-		}
+        while (arr[i] < pivot) {
+            i++;
+        }
 
-		while (arr[j] > pivot) {
-			j--;
-		}
+        while (arr[j] > pivot) {
+            j--;
+        }
 
-		if (i <= j) {
-			temp = arr[i];
-			arr[i] = arr[j];
-			arr[j] = temp;
-			i++; j--;
-		}
-	}
-		return i;
+        if (i <= j) {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++; j--;
+        }
+    }
+        return i;
 }
 
 var result = quickSort(arr, 0, arr.length - 1);
